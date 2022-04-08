@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+   </head>
+   <body onscroll=scroll()>
+    <div>
+        <div class="bar bar-background"></div>
+        <div id=myBar style="width: 0%;" class="bar"></div>
+        <h1>This is just a simple desktop that I made using web technologies</h1>    
+        <div>The whole desktop is pretty much just a website</div>
+        <br>
+        <div>Its primary uses are:</div>
+        <ol>
+            <li>Can be customized with any css or javascript</li>
+            <li>Just learning how to use html, javascript, and css fluently</li>
+        </ol>
+        <br>
+        <div>Current finished implementations are:</div>
+        <ol>
+            <li>Make windows using html, css, javascript</li>
+            <li>Make app icons that can be clicked to be run</li>
+        </ol>
+        <style>
+            h1 {
+                font-weight: bold;
+                font-size: 20px;
+                font-family: sans-serif;
+            }
+            body {
+                margin: 25px;
+                font-family: sans-serif;
+                background: white;
+            }
+            .bar-background {
+                background: white !important;
+                z-index: 100 !important;
+            }
+            
+            .bar {
+                width: 100%;
+                background: greenyellow;
+                height: 10px;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 101;
+            }
+        </style>
+        <script>
+        function scroll() {
+            let percentage = Math.ceil(window.scrollY) / (document.documentElement.scrollHeight - document.documentElement.clientHeight)
+            let p = percentage * 100
+            document.getElementById('myBar').style.width = p + '%'
+            console.log('hello')
+        }
+        </script>
+
+        </div>
+    </body
+
+</html>
