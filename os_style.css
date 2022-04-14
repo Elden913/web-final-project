@@ -42,6 +42,7 @@ iframe {
     background-color: purple;
     border-radius: 15px;
     margin: 5px;
+    position: relative;
 }
 .toolbar > .icon:hover {
     background: #9453a6;
@@ -91,4 +92,25 @@ iframe {
     left: 0;
     z-index: -1000;
     object-fit: cover;
+}
+
+.panel {
+    width: 100px;
+    background: red;
+    position: absolute;
+    bottom: var(--toolbar-icon-size);
+}
+.panel > div {
+    background: purple;
+    color: white;
+    font-family: sans-serif;
+    padding: 10px;
+}
+.panel > div > svg {
+    transform: translateY(15%);
+    margin-right: 6px;
+}
+
+.disp-none {
+    display: none;
 }

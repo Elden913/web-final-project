@@ -28,7 +28,7 @@ class SWindow {
         </button>
     </div>
     <div class="window-content" style="height: 100%;">
-       <iframe style="height: 100%; width: 100%;" src="${content}"></iframe>
+       <iframe style="height: 100%; width: 100%;" ${content}></iframe>
     </div>
 </div>
 `;

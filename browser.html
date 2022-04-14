@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body > * {
+                width: 100%;
+            }
+            .toolbar {
+                display: flex;
+                height: 20px;
+            }
+            .toolbar > input {
+                width: 100%;
+                padding: 0;
+                border: 0;
+                border: 1px black solid;
+            }
+            iframe {
+                height: calc(100vh - 20px);
+            }
+            body {
+                margin: 0;
+                overflow: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="toolbar">
+            <button onclick="reload()">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                    role="img"
+                    width="1em"
+                    height="1em"
+                    preserveAspectRatio="xMidYMid meet"
+                    viewBox="0 0 16 16"
+                >
+                    <path
+                        fill="currentColor"
+                        fill-rule="evenodd"
+                        d="M12.75 8a4.5 4.5 0 0 1-8.61 1.834l-1.391.565A6.001 6.001 0 0 0 14.25 8A6 6 0 0 0 3.5 4.334V2.5H2v4l.75.75h3.5v-1.5H4.352A4.5 4.5 0 0 1 12.75 8z"
+                        clip-rule="evenodd"
+                    />
+                </svg>
+            </button>
+            <input
+                type="text"
+                onkeypress="clickPress(event)"
+                value="browser_warning.html"
+            />
+        </div>
+        <iframe on src="browser_warning.html" frameborder="0"></iframe>
+        <script>
+            function clickPress(event) {
+                if (event.keyCode == 13) {
+                    document.querySelector("iframe").src =
+                        document.querySelector("input").value;
+                }
+            }
+            function reload() {
+                document
+                    .querySelector("iframe")
+                    .contentWindow.location.reload(true);
+            }
+        </script>
+    </body>
+</html>
